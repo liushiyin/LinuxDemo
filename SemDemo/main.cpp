@@ -182,6 +182,12 @@ void TestSemCtl(int semid)
         {
             break;
         }
+        else if(!strcmp(szCmd,"semInfo"))
+        {
+            struct seminfo si;
+            semctl(semid,SEM_INFO,&ai);
+
+        }
         else
         {
             Usage();

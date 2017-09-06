@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>637</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>637</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="newAction"/>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="newSaveAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_W">
+    <property name="title">
+     <string>编辑(&amp;W)</string>
+    </property>
+    <addaction name="undoAction"/>
+    <addaction name="redoAction"/>
+    <addaction name="cutAction"/>
+    <addaction name="copyAction"/>
+    <addaction name="allSelectAction"/>
+    <addaction name="pasteAction"/>
+    <addaction name="dateAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_L">
+    <property name="title">
+     <string>查看(&amp;L)</string>
+    </property>
+    <addaction name="fontAction"/>
+    <addaction name="colorAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="aboutAction"/>
+    <addaction name="quitAction"/>
+    <addaction name="updateAction"/>
+    <addaction name="musicAction"/>
+    <addaction name="runAction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_W"/>
+   <addaction name="menu_L"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="openAction"/>
+   <addaction name="newAction"/>
+   <addaction name="undoAction"/>
+   <addaction name="redoAction"/>
+   <addaction name="saveAction"/>
+   <addaction name="newSaveAction"/>
+   <addaction name="cutAction"/>
+   <addaction name="copyAction"/>
+   <addaction name="allSelectAction"/>
+   <addaction name="pasteAction"/>
+   <addaction name="runAction"/>
+   <addaction name="musicAction"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="newAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/new.png</normaloff>:/new/icon/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建(&amp;N)</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/save.png</normaloff>:/new/icon/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+  </action>
+  <action name="newSaveAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/save as.png</normaloff>:/new/icon/images/save as.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为(&amp;A)</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/open.png</normaloff>:/new/icon/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开(&amp;O)</string>
+   </property>
+  </action>
+  <action name="fontAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/font.png</normaloff>:/new/icon/images/font.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体(&amp;F)</string>
+   </property>
+  </action>
+  <action name="colorAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/color.png</normaloff>:/new/icon/images/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>颜色(&amp;C)</string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/about.png</normaloff>:/new/icon/images/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="quitAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/quit.png</normaloff>:/new/icon/images/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出(&amp;Q)</string>
+   </property>
+  </action>
+  <action name="updateAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/update.png</normaloff>:/new/icon/images/update.png</iconset>
+   </property>
+   <property name="text">
+    <string>更新(&amp;U)</string>
+   </property>
+  </action>
+  <action name="cutAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/cut.png</normaloff>:/new/icon/images/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切(&amp;C)</string>
+   </property>
+  </action>
+  <action name="copyAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/copy.png</normaloff>:/new/icon/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制(&amp;Y)</string>
+   </property>
+  </action>
+  <action name="allSelectAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/allSe.png</normaloff>:/new/icon/images/allSe.png</iconset>
+   </property>
+   <property name="text">
+    <string>全选(&amp;S)</string>
+   </property>
+  </action>
+  <action name="pasteAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/paste.png</normaloff>:/new/icon/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴(&amp;P)</string>
+   </property>
+  </action>
+  <action name="dateAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/date.png</normaloff>:/new/icon/images/date.png</iconset>
+   </property>
+   <property name="text">
+    <string>日期(&amp;D)</string>
+   </property>
+  </action>
+  <action name="undoAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/undo.png</normaloff>:/new/icon/images/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销(&amp;U)</string>
+   </property>
+  </action>
+  <action name="redoAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/redo.png</normaloff>:/new/icon/images/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>重做(&amp;R)</string>
+   </property>
+  </action>
+  <action name="musicAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/music.png</normaloff>:/new/icon/images/music.png</iconset>
+   </property>
+   <property name="text">
+    <string>音乐(&amp;M)</string>
+   </property>
+  </action>
+  <action name="runAction">
+   <property name="icon">
+    <iconset resource="src.qrc">
+     <normaloff>:/new/icon/images/run.png</normaloff>:/new/icon/images/run.png</iconset>
+   </property>
+   <property name="text">
+    <string>运行(&amp;E)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections/>
+</ui>

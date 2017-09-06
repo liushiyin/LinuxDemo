@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShapeWindows</class>
+ <widget class="QMainWindow" name="ShapeWindows">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSa">
+    <property name="title">
+     <string>sa</string>
+    </property>
+    <addaction name="actionSa"/>
+    <addaction name="actionSadas"/>
+   </widget>
+   <addaction name="menuSa"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSa">
+   <property name="text">
+    <string>sa</string>
+   </property>
+  </action>
+  <action name="actionSadas">
+   <property name="text">
+    <string>sadas</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -63,7 +63,9 @@ void TestMsgRS()
             int type;
             cin>>type;
             int iRet=msgrcv(msgid,&msg,1024,type,0);
-            if(iRet==-1)
+            //msgrcv(msgid,&msg,strlen(msg.szBuf),type,IPC_NOWAIT);非阻塞
+            //msgrcv(msgid,&msg,strlen(msg.szBuf),type,MSG_EXCEPT);接收除type之外的所有消息
+            if(iRet<0)
             {
                 perror("rcv failed");
                 break;
@@ -77,7 +79,9 @@ void TestMsgRS()
         {
             write(STDERR_FILENO,"Send:",strlen("Send:"));
             memset(&msg,0,sizeof(msg));
-            scanf("%ld%s",&(msg.type),msg.szBuf);
+            //scanf("%ld%s",&(msg.type),msg.szBuf);
+            cin>>msg.type;
+            cin>>msg.szBuf;
             int iRet=msgsnd(msgid,&msg,strlen(msg.szBuf),0);
             if(iRet!=0)
             {
@@ -86,6 +90,31 @@ void TestMsgRS()
             }
         }
     }
+}
+
+void TestMsgCtl()
+{
+    key_t key=ftok("a.txt",1);
+    if(key==-1)
+    {
+        perror("ftok failed");
+        return;
+    }
+    cout<<"Key:"<<key<<endl;
+    int msgid=msgget(key,IPC_CREAT|0666);
+    if(msgid==-1)
+    {
+        perror("msgget failed");
+        return;
+    }
+    cout<<"Msgid:"<<msgid<<endl;
+    struct msqid_ds md;
+    msgctl(msgid,IPC_STAT,&md);
+    //msgctl(msgid,IPC_RMID,&md); 移除消息队列
+
+    //msgctl(msgid,MSG_INFO,&md);
+    //struct msginfo info=(struct msginfo)md;  获取消息队列信息
+    cout<<md.msg_perm.__key<<endl;
 }
 
 int main()

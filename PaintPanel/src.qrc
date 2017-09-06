@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/new/images">
+        <file>about.png</file>
+        <file>color.png</file>
+        <file>allSe.png</file>
+        <file>copy.png</file>
+        <file>cut.png</file>
+        <file>icon.ico</file>
+        <file>date.png</file>
+        <file>font.png</file>
+        <file>music.png</file>
+        <file>new.png</file>
+        <file>open.png</file>
+        <file>paste.png</file>
+        <file>quit.png</file>
+        <file>redo.png</file>
+        <file>run.png</file>
+        <file>save.png</file>
+        <file>save as.png</file>
+        <file>undo.png</file>
+        <file>update.png</file>
+        <file>rubber.png</file>
+        <file>cut out.png</file>
+        <file>fill.png</file>
+        <file>resize.png</file>
+        <file>rotate.png</file>
+        <file>shape.png</file>
+        <file>brush.png</file>
+    </qresource>
+</RCC>
